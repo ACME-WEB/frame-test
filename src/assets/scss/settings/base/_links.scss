@@ -1,0 +1,66 @@
+// Links
+
+// Color
+$link--color: (
+	link: 								get-color(dark, 1),
+	link-hover: 						null,
+	header-link: 						get-color(dark, 2),
+	header-link-hover: 					null,
+	header-link-mobile: 				get-color(dark, 3),
+	header-link-mobile-hover: 			null,
+	footer-link: 						get-color(dark, 2),
+	footer-link-hover: 					null,
+	footer-block-link: 					get-color(dark, 2),
+	footer-block-link-hover: 			null,
+	button-link: 						get-color(dark, 3),
+	button-link-hover: 					null,
+	func-link: 							get-color(primary, 1),
+	func-link-hover: 					null,	
+	// ↓ Inverted colors
+	link-inverse: 						get-color(light, 2),
+	link-hover-inverse: 				null,
+	header-link-inverse: 				get-color(dark, 3),
+	header-link-hover-inverse:			null,
+	footer-link-inverse: 				get-color(dark, 3),
+	footer-link-hover-inverse: 			null,
+	footer-block-link-inverse: 			get-color(dark, 3),
+	footer-block-link-hover-inverse:	null,
+	button-link-inverse: 				get-color(dark, 2),
+	button-link-hover-inverse:			null,
+	func-link-inverse: 					get-color(light, 2),
+	func-link-hover-inverse:			null	
+);
+
+// Font-weight
+$link--weight: (
+	link: 				500,
+	header-link:		500,
+	footer-link:		400,
+	footer-block-link:	400,
+	button-link:		400
+);
+
+// Text decoration
+$link-main--decoration: 				none;
+$link-main--decoration-hover: 			underline;
+$link-header--decoration: 				null;
+$link-header--decoration-hover:			null;
+$link-footer--decoration: 				null;
+$link-footer--decoration-hover: 		null;
+$link-footer-block--decoration: 		null;
+$link-footer-block--decoration-hover:	null;
+$link-button--decoration: 				null;
+$link-button--decoration-hover: 		null;
+$link-func--decoration: 				null;
+$link-func--decoration-hover: 			null;
+
+// Text transform
+$link-header--transform: 		uppercase;
+$link-footer--transform: 		null;
+$link-footer-block--transform: 	null;
+$link-button--transform: 		null;
+$link-func--transform: 			null;
+
+// Don't change lines below!
+$color:			map-push($color, $link--color);
+$font--weight: 	map-push($font--weight, $link--weight);

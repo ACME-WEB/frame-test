@@ -1,0 +1,112 @@
+[class*=illustration-] {
+	position: relative;
+
+	&::after {
+		pointer-events: none;
+	}
+}
+
+[class*=illustration-element-]::after {
+	z-index: -1;
+}
+
+[class*=illustration-section-]::after {
+	z-index: -2;
+}
+
+// Hero illustration
+.illustration-section-01::after {
+	@include illustration('illustration-section-01.svg', 100%, 1041px, top);
+
+	@include media( '<=960px' ) {
+		top: -92px;
+		background-position: 56% 0%;
+	}
+}
+
+// Pricing illustration
+.illustration-section-02::after {
+	@include illustration('illustration-section-02.svg', 200%, 640px, center, null, -100px);
+}
+
+// Generic illustration
+.illustration-section-03::after {
+	@include illustration('illustration-section-03.svg', 100%, 107px, top, null, 175px);
+}
+
+.illustration-section-04::after {
+	@include illustration('illustration-section-04.svg', 100%, 126px, bottom, null, 40px);
+}
+
+.illustration-section-05::after {
+	@include illustration('illustration-section-05.svg', 100%, 74px, top, null, 129px);
+}
+
+// Footer illustration
+.illustration-section-06::after {
+	@include illustration('illustration-section-06.svg', 200%, 31px, bottom);
+}
+
+// Behind hero figure
+.illustration-element-01 {
+
+	&::after {
+		@include illustration('illustration-element-01.svg', 200%, 200%);
+	}
+
+	// ... and top shape
+	&::before {
+		@include illustration('illustration-element-01-top.svg', 200%, 200%);
+		pointer-events: none;
+		z-index: 1;
+	}	
+}
+
+// Behind hero figure 02
+.illustration-element-02 {
+
+	&::after {
+		@include illustration('illustration-element-02.svg', 200%, 200%);
+	}
+
+	// ... and top shape
+	&::before {
+		@include illustration('illustration-element-02-top.svg', 200%, 200%);
+		pointer-events: none;
+		z-index: 1;
+	}
+}
+
+// Behind features split image
+.illustration-element-03::after {
+	@include illustration('illustration-element-03.svg', 200%, 200%);
+}
+
+.illustration-element-04::after {
+	@include illustration('illustration-element-04.svg', 200%, 200%);
+}
+
+.illustration-element-05::after {
+	@include illustration('illustration-element-05.svg', 200%, 200%);
+}
+
+// Behind team
+.illustration-element-06::after {
+	@include illustration('illustration-element-06.svg', 200%, 200%);
+}
+
+.illustration-element-07::after {
+	@include illustration('illustration-element-07.svg', 300%, 300%);
+}
+
+// Behind CTA
+.illustration-element-08::after {
+	@include illustration('illustration-element-08.svg', 100%, 100%, null, null, 36px);
+}
+
+// Gradient for sections
+.gradient-section {
+	border-top: 1px solid get-color(light, 3);
+	background: linear-gradient(to bottom, rgba(get-color(light, 2), .32) 0%, rgba(get-color(light, 2), 0) 100%);
+	z-index: 0 !important;
+}

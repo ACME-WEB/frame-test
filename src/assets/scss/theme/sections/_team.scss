@@ -1,0 +1,11 @@
+.team-item-image {
+
+    img {
+        border-radius: 2px;
+    }
+}
+
+.team-item-role {
+    @include font-family(heading);
+    @include font-weight(heading);
+}
