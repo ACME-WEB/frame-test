@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter, Switch, Redirect } from "react-router-dom";
+import { withRouter, Switch } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 
@@ -39,21 +39,19 @@ class App extends React.Component {
 				children={() => (
 					<Switch>
 						<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-						{
-							<AppRoute
-								exact
-								path={routes.feepage}
-								component={FeePage}
-								layout={LayoutDefault}
-							/>
-						}
-						else {<Redirect></Redirect>}
+						<AppRoute
+							exact
+							path={routes.feepage}
+							component={FeePage}
+							layout={LayoutDefault}
+						/>
 						<AppRoute
 							exact
 							path={routes.submit_test}
 							component={QualityExamConfirm_1}
 							layout={LayoutAlternative}
 						/>
+
 						{/* <AppRoute exact path={routes.SUBMIT_TEXT} component={Secondary} layout={LayoutAlternative} /> */}
 						<AppRoute
 							exact
